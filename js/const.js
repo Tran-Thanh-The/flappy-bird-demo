@@ -1,0 +1,12 @@
+const WIDTH = 360;
+const HEIGHT = 640;
+const BirdW = 42.5;
+const BirdH = 30;
+const BirdX = 80;
+const Ground = 500;
+const pipeH = 400;
+const wayH = 100;
+const pipeW = 65;
+const DieY = Ground - BirdH;
+const DieX1 = 122.5;
+const DieX2 = 25;
