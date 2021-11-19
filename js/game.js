@@ -6,6 +6,8 @@ class game {
     this.canvas.height = HEIGHT;
     this.canvas.width = WIDTH;
     document.querySelector('#app').appendChild(this.canvas);
+    this.audio = document.createElement('audio');
+    document.querySelector('#app').appendChild(this.audio);
 
     this.currentFame = 0;
 
@@ -13,7 +15,9 @@ class game {
     this.ground = new ground(this);
     this.pipe = new colum(this);
     this.bird = new bird(this);
+    this.scores = new scores(this);
 
+    ( localStorage.score === undefined) ? localStorage.setItem("score", 0) : {};
     this.loop();
   }
 
@@ -37,12 +41,16 @@ class game {
     this.pipe.x2 = 730;
     this.pipe.y1 = 50 + Math.floor(Math.random()*230);
     this.pipe.y2 = Math.floor(Math.random()*230);
+    ( localStorage.score < this.scores.score) ? localStorage.score = this.scores.score : {};
+    this.scores.score = 0;
+    this.scores.loadImage();
   }
 
   update() {
     this.map.update();
     this.pipe.update();
     this.ground.update();
+    this.scores.update();
     this.bird.update();
   }
 
@@ -50,6 +58,7 @@ class game {
     this.map.draw();
     this.pipe.draw();
     this.ground.draw();
+    this.scores.draw();
     this.bird.draw();
   }
 

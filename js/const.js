@@ -10,3 +10,4 @@ const pipeW = 65;
 const DieY = Ground - BirdH;
 const DieX1 = 122.5;
 const DieX2 = 25;
+const Mark = 25;

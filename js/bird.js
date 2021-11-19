@@ -38,6 +38,8 @@ class bird {
       }
       else {  
         this.die = true;
+        this.game.audio.src = '../sound/die.ogg';
+        this.game.audio.play();
         // this.game.bird.start = false;
       }
       (this.game.currentFame%3 === 0) ? this.speed += 2 : {};
