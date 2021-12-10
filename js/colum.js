@@ -12,8 +12,8 @@ class colum {
   }
 
   loadImage() {
-    this.colum1.src = '../img/pipe.png';
-    this.colum2.src = '../img/pipe2.png';
+    this.colum1.src = './img/pipe.png';
+    this.colum2.src = './img/pipe2.png';
   }
 
   update() {
@@ -31,14 +31,14 @@ class colum {
       if ( this.x1 >= DieX2 && this.x1 <= DieX1) {
         if (!(this.game.bird.y >= this.y1+50 && this.game.bird.y <= this.y1 + 140)) {
           this.game.bird.die = true;
-          this.game.audio.src = '../sound/die.ogg';
+          this.game.audio.src = './sound/die.ogg';
           this.game.audio.play();
         }
       } 
       if ( this.x2 >= DieX2 && this.x2 <= DieX1) {
         if (!(this.game.bird.y >= this.y2+50 && this.game.bird.y <= this.y2 + 140)) {
           this.game.bird.die = true;
-          this.game.audio.src = '../sound/die.ogg';
+          this.game.audio.src = './sound/die.ogg';
           this.game.audio.play();
         }
       } 

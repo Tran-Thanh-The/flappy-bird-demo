@@ -9,7 +9,7 @@ class ground {
   }
 
   loadImage() {
-    this.ground.src = '../img/base.png';
+    this.ground.src = './img/base.png';
   }
 
   update() {

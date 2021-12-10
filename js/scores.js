@@ -9,8 +9,8 @@ class scores {
   }
 
   loadImage() {
-    this.img_0.src = `../img/${Math.floor(this.score/10)}.png`;
-    this.img_1.src = `../img/${this.score%10}.png`;
+    this.img_0.src = `./img/${Math.floor(this.score/10)}.png`;
+    this.img_1.src = `./img/${this.score%10}.png`;
   }
 
   update() {
@@ -19,7 +19,7 @@ class scores {
       this.loadImage();
     }
     if (this.game.pipe.x1 === 28 || this.game.pipe.x2 === 28) {
-      this.game.audio.src = '../sound/point.ogg';
+      this.game.audio.src = './sound/point.ogg';
       this.game.audio.play();
     }
   }

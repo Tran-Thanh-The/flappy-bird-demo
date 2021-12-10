@@ -13,7 +13,7 @@ class bird {
   }
 
   loadImage() {
-    this.bird.src = "../img/mid.png";
+    this.bird.src = "./img/mid.png";
   }
 
   listenKeyBoard() {
@@ -38,7 +38,7 @@ class bird {
       }
       else {  
         this.die = true;
-        this.game.audio.src = '../sound/die.ogg';
+        this.game.audio.src = './sound/die.ogg';
         this.game.audio.play();
         // this.game.bird.start = false;
       }

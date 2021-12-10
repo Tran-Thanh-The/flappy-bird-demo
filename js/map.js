@@ -9,7 +9,7 @@ class map {
   }
 
   loadImage() {
-    this.background.src = '../img/background-day.png';
+    this.background.src = './img/background-day.png';
   }
 
   update() {
